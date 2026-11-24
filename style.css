@@ -1,0 +1,35 @@
+:root {
+  --bg: #fff8f3; --card: #ffffff; --ink: #1d1530; --muted: #5d5470; --line: #eadfe8;
+  --sun: #ff5e7e; --sun2: #ffb347; --sea: #3fc1c9; --radius: 16px;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #120d1f; --card: #1c1530; --ink: #f4eefb; --muted: #b4a9c8; --line: #2e2546; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--sun); }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+header.top { display: flex; align-items: center; gap: 12px; padding: 18px 0; flex-wrap: wrap; }
+header.top img { width: 44px; height: 44px; border-radius: 50%; }
+header.top b { font-size: 20px; letter-spacing: .3px; }
+header.top nav { margin-left: auto; display: flex; gap: 16px; font-size: 15px; flex-wrap: wrap; }
+header.top nav a { color: var(--ink); text-decoration: none; }
+header.top nav a:hover { color: var(--sun); }
+.hero { margin: 10px 0 28px; padding: 44px 28px; border-radius: 24px; color: #fff;
+  background: linear-gradient(135deg, #ff5e7e 0%, #ff8a5c 45%, #ffb347 75%, #3fc1c9 100%); }
+.hero h1 { margin: 0 0 10px; font-size: clamp(30px, 6vw, 48px); line-height: 1.1; }
+.hero p { margin: 0; font-size: 19px; max-width: 620px; }
+.socials { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.socials a { background: rgba(255,255,255,.18); color: #fff; padding: 8px 14px; border-radius: 999px; text-decoration: none; font-weight: 600; }
+.socials a:hover { background: rgba(255,255,255,.3); }
+section { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; margin: 0 0 18px; }
+section h2 { margin: 0 0 8px; font-size: 22px; }
+section p, section li { color: var(--muted); }
+section h3 { margin: 18px 0 4px; font-size: 18px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.grid div { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.grid b { display: block; margin-bottom: 4px; }
+footer { padding: 26px 0 40px; color: var(--muted); font-size: 15px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+footer a { font-weight: 600; }
+.doc h1 { font-size: 32px; margin: 8px 0 4px; }
+.doc .date { color: var(--muted); margin: 0 0 18px; }
